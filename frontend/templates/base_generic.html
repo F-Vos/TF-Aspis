@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% block title %}
+    <title>TF-Aspis</title>
+    {% endblock %}
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    {% load static %}
+    <link rel="stylesheet" href="{% static '/frontend/css/style.css' %}" />
+  </head>
+  <body>
+
+        <div class="logo">
+            <!-- <img src="{% static '/frontend/img/logo.svg' %}" alt=""> -->
+        </div>
+          <nav class="fullscreenNav">
+            <div class="hamburger-menu">
+              <div class="line line-1"></div>
+              <div class="line line-2"></div>
+              <div class="line line-3"></div>
+            </div>
+            <ul>
+              <li data-text="Home"><a href="/">Home</a></li>
+              <li data-text="About"><a href="/about.html">About</a></li>
+              <li data-text="Apply"><a href="http://tf-aspis.com/site_applications/new">Apply</a></li>
+              <li data-text="Roster"><a href="http://tf-aspis.com/pages/roster">Roster</a></li>
+              <li data-text="Wiki"><a href="#">Wiki</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="loader-wrapper">
+            <span class="loader"><span class="loader-inner"></span></span>
+          </div>
+      {% block nav %} {% endblock %} {% block content %} {% endblock %} {% block about %} {% endblock %}
+
+    <script src="{% static '/frontend/js/hamburger.js' %}"></script>
+  </body>
+</html>
