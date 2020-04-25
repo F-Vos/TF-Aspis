@@ -168,12 +168,14 @@ img {
 }
 
 .logo {
-  width: 170px;
+  width: 50px;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+
   margin-left: 0;
+  z-index: 2000;
+
+  top: 50px;
+  left: 75px;
 }
 
 /* Front page */
@@ -391,6 +393,11 @@ img {
     padding: 12px 25px;
     letter-spacing: 5px;
     font-size: 1.5rem;
+  }
+  .logo {
+    top: 50px;
+    left: 50%;
+    transform: translate(-50%, 0%);
   }
 }
 @media (max-width: 700px) {
